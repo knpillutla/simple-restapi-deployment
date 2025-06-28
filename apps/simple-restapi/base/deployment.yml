@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-deployment
+  name: simple-restapi
   annotations:
     codefresh.io/app: simple-go-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: trivial-go-web-app
+      app: simple-restapi
   template:
     metadata:
       labels:
-        app: trivial-go-web-app
+        app: simple-restapi
     spec:
       containers:
-      - name: webserver-simple
+      - name: simple-webserver
         imagePullPolicy: Always
-        image: docker.io/kostiscodefresh/simple-env-app:1.0
+        image: 294232616647.dkr.ecr.us-east-1.amazonaws.com/krishnarepo/simple-restapi:develop-latest
         ports:
         - containerPort: 8080
