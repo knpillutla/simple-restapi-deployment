@@ -16,6 +16,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: simple-restapi
+            name: simple-resapi-service
             port:
               number: 8080
