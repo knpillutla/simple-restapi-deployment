@@ -19,7 +19,7 @@ spec:
       containers:
         - name: simple-restapi-container
           imagePullPolicy: Always
-          image: 294232616647.dkr.ecr.us-east-1.amazonaws.com/krishnarepo/simple-restapi:develop-29af5f1
+          image: 294232616647.dkr.ecr.us-east-1.amazonaws.com/krishnarepo/simple-restapi:develop-e207d26
           ports:
             - containerPort: 8080
       imagePullSecrets:
